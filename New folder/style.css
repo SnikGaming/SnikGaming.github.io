@@ -1,0 +1,209 @@
+html, body {
+      /* Thay đổi màu nền tại đây */
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 0;
+}
+
+img {max-width: 100%;}
+
+body {
+      display: grid;
+      font-family: "Segoe UI", sans-serif;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(auto, auto);
+      color: #383838;
+      text-shadow: 0.4px 0.4px 0.4px rgba(0,0,0,.2);
+}
+
+h1 {
+      font-weight: lighter;
+      grid-column: span 3;
+      text-align: center;
+      color: #ec407a;
+}
+
+#wrapper {
+      display: grid;
+      grid-column: 3 / 11;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(auto, auto);
+      grid-row-gap: 10px;
+      margin-top: 3.6rem;
+}
+
+#clock-box, #info {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+}
+
+#clock-box #clock {
+      grid-column: 4 / 10;
+      background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
+      padding: .6rem 2rem;
+      padding-top: .8rem;
+      text-align: center;
+      font-size: 2.4rem;
+      border-radius: 10rem;
+}
+
+date, time {
+      display: block;
+}
+
+date {
+      font-size: 18px;
+}
+
+time {
+      font-family: "Arial", sans-serif;
+      line-height: 3.2rem;
+      letter-spacing: 2px;
+}
+
+.avt {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+}
+
+#info {
+      margin-top: 2.6rem;
+}
+
+#heart {
+      grid-column: span 2;
+      display: grid;
+      grid-template-rows: 2;
+      font-size: 44px;
+      color: #b90d46;
+      align-self: center;
+      padding-bottom: 2.6rem;
+      text-align: center;
+}
+
+anni {
+      font-size: 16px;
+      letter-spacing: 0.2px;
+}
+
+#info .one {
+      grid-column: 3 / 6;
+      text-align: center;
+}
+
+#info .two {
+      grid-column: 8 / 11;
+      text-align: center;
+}
+
+footer {
+      grid-column: span 3;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: lighter;
+      margin-top: 1.2rem;
+}
+
+#music {
+      grid-column: 2;
+      position: relative;
+      z-index: 1000;
+      opacity: .4;
+}
+
+#music audio {
+      width: 100%;
+}
+
+#mask {
+      background-image: linear-gradient(to top, #6d44cc5d 0%, #f09cd880 100%);
+      opacity: .42;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+}
+
+@media (max-width: 992px) {
+      #wrapper {
+            grid-column: span 12;
+      }
+
+      #clock-box #clock {
+            grid-column: 2 / 12;
+      }
+
+      .avt {
+            width: 120px;
+            height: 120px;
+      }
+
+      #info .one, #info .two{
+            grid-column: span 12;;
+      }
+
+      #heart {
+            grid-column: span 12;
+            padding-bottom: 1rem;
+      }
+
+      footer {
+            font-size: 1.2rem;
+            margin: 0;
+            padding-bottom: 2rem;
+      }
+
+      #music audio {
+            width: revert;
+      }
+}
+
+
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(15px, -20px);
+      }
+      50% {
+        transform: translate(0, -40px);
+      }
+      75% {
+        transform: translate(-15px, -20px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    .heart {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23ed5565' d='M24.983.375c-3.556 0-7.027 1.505-9.447 4.152A13.495 13.495 0 0012.53 17.47c2.59.788 5.336 1.05 8.146.762 6.09-.691 11.045-5.648 11.733-11.739.692-6.091-2.121-12.17-7.117-16.167C32.022 1.855 28.561.375 24.983.375zm-.158 22.963c-3.71 0-6.715-3.005-6.715-6.715 0-3.71 3.005-6.715 6.715-6.715 3.71 0 6.715 3.005 6.715 6.715 0 3.71-3.005 6.715-6.715 6.715z'/%3E%3C/svg%3E");
+  background-size: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+    
+    /* .heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23ed5565' d='M24.983.375c-3.556 0-7.027 1.505-9.447 4.152A13.495 13.495 0 0012.53 17.47c2.59.788 5.336 1.05 8.146.762 6.09-.691 11.045-5.648 11.733-11.739.692-6.091-2.121-12.17-7.117-16.167C32.022 1.855 28.561.375 24.983.375zm-.158 22.963c-3.71 0-6.715-3.005-6.715-6.715 0-3.71 3.005-6.715 6.715-6.715 3.71 0 6.715 3.005 6.715 6.715 0 3.71-3.005 6.715-6.715 6.715z'/%3E%3C/svg%3E");
+      background-size: contain;
+      animation: float 3s ease-in-out infinite;
+    }
+     */
