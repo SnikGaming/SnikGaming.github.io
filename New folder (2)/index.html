@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./add.css">
+    <link rel="shortcut icon" type="image/png" href="./img/Heart.ico" />
+    <!-- 0. Tiêu đề website -->
+    <title>Together</title>
+    <style>
+        /* width */
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        /* Track */
+        
+         ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px rgb(0, 247, 33);
+            border-radius: 10px;
+        }
+        /* Handle */
+        
+         ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(3deg, rgba(110, 2, 252, 0.5), rgba(41, 243, 0, 0.5));
+            border-radius: 10px;
+        }
+        /* Handle on hover */
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(16deg, red, blue, green);
+        }
+        
+        body,
+        video {
+            cursor: url('./img/Heart.cur'), auto;
+        }
+        
+        p>a,
+        .play_mk,
+        #play_ms,
+        .play_a,
+        a#text {
+            cursor: url('./img/por.cur'), auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 1. Tiêu đề -->
+        <div class="title_oc">
+            <h1>CHÚNG TA ĐÃ ĐI QUA</h1>
+        </div>
+
+
+        <div id="clock-box">
+            <div id="clock">
+                <!-- Nơi hiển thì số ngày yêu nhau (bạn không cân thay đổi gì cũng được) -->
+                <date>0 Ngày</date>
+                <time>00:00:00</time>
+            </div>
+        </div>
+
+        <div id="info">
+            <div class="one">
+                <a target="_blank" href="https://www.facebook.com/TranThoiLong/">
+
+                <!-- 3. Ảnh của bạn nam -->
+                <div class="img_lala1">
+                    <img src="img/long.jpg" class="avt">
+                </div>
+
+                <!-- 4. Tên bạn nam và in4-->
+                <p class="name_a1">
+                    <a class="name_b" target="_blank" href="https://www.facebook.com/TranThoiLong/">
+                   Thới Long</a></p>
+            </div>
+            <div id="heart">
+                <p class=heart_color>❤</p>
+                <anni>...</anni>
+            </div>
+            <div class="two">
+                <a target="_blank" href="https://www.facebook.com/trang.vanthithu.7">
+                <!-- 5. Ảnh của bạn nữ -->
+                <div class="img_lala2">
+                    <img src="img/em.jpg" class="avt">
+                </div>
+
+                <!-- 6. Tên của bạn nữ và in4-->
+                <p class="name_a2">
+                    <a class="name_b" target="_blank" href="https://www.facebook.com/trang.vanthithu.7">
+                        Thu Trang</a></p>
+            </div>
+        </div>
+
+        <div id="music">
+            <audio loop autoplay controls id="musi"></audio>
+            <div class="play_mk">
+                <button id="play_ms" onClick="play()">
+                        <a class="play_a">PLAY</a>
+                    </button>
+            </div>
+        </div>
+        <!-- 7. Tiêu đề bên dưới -->
+        <footer>
+            <span class="tim">💕</span>
+            <video src="./img/gaming.mp4" class="smoke_video" autoplay muted l-oop></video>
+            <a id="text">Cảm ơn vì khoảng thời gian ta bên nhau <a id="text" class="heart_ef">❤️</a> </a>
+            <span class="tim">💕</span>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
