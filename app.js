@@ -2,7 +2,8 @@
 const yourDate = new Date("2023-03-11T22:00:00");
 
 // Danh sách các bài nhạc nền
-const music = ['roitoilun'];
+music = ['seetinh','roitoilun']; //Doi nhac o day
+
 
 document.addEventListener('DOMContentLoaded', function(){
       const rootTime = document.querySelector("time");
